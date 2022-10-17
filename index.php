@@ -15,7 +15,7 @@
         <div id="container">
             <h2> My family</h2>
             <div id="btn_add">
-                <a href="#"> ADD </a>
+                <a href="form.php"> ADD </a>
             </div>
         </div>
 
