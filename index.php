@@ -15,7 +15,7 @@
         <div id="container">
             <h2> My family</h2>
             <div id="btn_add">
-                <a href="#"> Add </a>
+                <a href="#"> ADD </a>
             </div>
         </div>
 
@@ -25,7 +25,7 @@
             <?php
                 require_once(config.php); #calling the config file and passing the path as a parameter now we can access the database in that file
 
-                $sql = "SELECT MemberId, Firstname, Lastname, Age, Gender, Relationship FROM FamilyMembers";
+                $sql = "SELECT MemberID, FirstName, LastName, Age, Gender, Relationship FROM FamilyMembers";
                 $response = @mysqli_query($connection, $sql);
 
                 if($response) {
@@ -34,7 +34,7 @@
                     echo '<table>
                     
                         <tr> 
-                            <th> Member Id </th>
+                            <th> Member ID </th>
                             <th> First Name</th>
                             <th> Last Name</th>
                             <th> Age </th>
@@ -43,7 +43,7 @@
                             
                         </tr>';
 
-                        while ($row = mysqli_fetch_array(response)) {
+                        while ($row = mysqli_fetch_array($response)) {
                             echo '
 
                                 <tr>
