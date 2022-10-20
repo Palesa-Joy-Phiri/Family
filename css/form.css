@@ -24,7 +24,6 @@ input [type=submit] {
 
 input [type=submit]:hover {
     background-color: aquamarine;
-
 }
 
 #btn_add {
