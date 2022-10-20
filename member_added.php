@@ -27,7 +27,7 @@
                             
                             //First name
                             if(empty($_POST['first_name'])) {
-                                $null_fields[] = "First Name";
+                                $null_fields[] = 'First Name';
 
                             }else {
                                 $firstname = trim($_POST['first_name']);
@@ -35,7 +35,7 @@
 
                             //Last name
                             if(empty($_POST['last_name'])) {
-                                $null_fields[] = "Last Name";
+                                $null_fields[] = 'Last Name';
 
                             }else {
                                 $lastname = trim($_POST['last_name']);
@@ -44,7 +44,7 @@
 
                             //Age
                             if(empty($_POST['age'])) {
-                                $null_fields[] = "Age";
+                                $null_fields[] = 'Age';
 
                             }else {
                                 $age = trim($_POST['age']);
@@ -53,7 +53,7 @@
 
                             //Gender
                             if(empty($_POST['gender'])) {
-                                $null_fields[] = "Gender";
+                                $null_fields[] = 'Gender';
 
                             }else {
                                 $gender = trim($_POST['gender']);
@@ -62,7 +62,7 @@
 
                             //Relationship
                             if(empty($_POST['relationship'])) {
-                                $null_fields[] = "Relationship";
+                                $null_fields[] = 'Relationship';
 
                             }else {
                                 $relationship = trim($_POST['relationship']);
@@ -70,14 +70,13 @@
 
                             if(empty($null_fields)) {
 
-                                $null_fields = NULL;
-                                $sql = "INSERT INTO familymembers VALUES('$null_variable', '$firstname', '$lastname', '$age', '$gender', '$relationship')";
+                                $sql = "INSERT INTO FamilyMembers VALUES( NULL, '$firstname', '$lastname', '$age', '$gender', '$relationship')";
                                 
                                 if(!mysqli-query ($connection, $sql)) {
                                     die ("Error:".mysqi_error($connection));
                                 }
 
-                                echo "Family member has been created"
+                                echo "Family member has been created";
                                 mysqli_close($connection);
 
                             }
