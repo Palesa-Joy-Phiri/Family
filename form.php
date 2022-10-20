@@ -16,7 +16,7 @@
 
             </div>
 
-            <form action ="#" method= "post">
+            <form action ="member_added.php" method= "post">
 
                 <div id ="header">
                     <h3> Add A Family Member</h3>
